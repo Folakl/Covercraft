@@ -2,7 +2,7 @@ import React from 'react'
 import Features from '../Components/Features'
 import { useNavigate } from 'react-router-dom'
 import Section from '../Components/Section'
-import Footer from '../Components/footer'
+import Footer from '../Components/Footer'
 const Home = () => {
   const navigate = useNavigate();
   const  handleGetstarted = ()=>{
