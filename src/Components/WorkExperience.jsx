@@ -41,9 +41,12 @@ const WorkExperience = ({handleClose}) => {
 
   return (
         <div className='border-5 border-blue-900 justify-self-center w-fit p-5  m-5  rounded-2xl'>
-         <h1 className='font-bold text-[25px]'>Work Experience</h1>
+         <div className='flex justify-between'>
+            <h1 className='font-bold text-[25px] '>Work Experience</h1>
+           <h3  className='text-black font-bold text-2xl pt-1 cursor-pointer border-2 w-10 text-center' onClick={handleClose}><ion-icon name="close-outline"></ion-icon></h3>
+           </div>
 
-       <div className='flex gap-5'>
+       <div className='flex flex-wrap gap-5'>
            <div>
          <h3 className='text-[20px] '>Job Title<span className='text-[red]'>*</span></h3>
        <input type="text" placeholder='Job Title'

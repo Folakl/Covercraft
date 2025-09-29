@@ -11,7 +11,6 @@ const Login = () => {
   const [password,setPassword] = useState("");
   const [showpassword,setShowpassword] = useState(false);
   const [resetoverlay,setResetoverlay] = useState(false)
-  const {setProfile} = useContext(FormContext)
   const {setIsloggedin} = useContext(FormContext)
   const [loading,setLoading] = useState(false)
 
@@ -94,7 +93,7 @@ const Login = () => {
       <div className='flex justify-center'>
           {
             loading ? (
-              <button className='font-bold text-black my-5 bg-white  w-[120px] outline-none h-fit py-2 rounded-2xl cursor-progress' >Log in</button> 
+              <button className='font-bold text-black my-5 bg-white  w-[120px] outline-none h-fit py-2 rounded-2xl cursor-progress' >Logging in</button> 
             ):
             (
               <button className='font-bold text-black my-5 bg-white  w-[120px] outline-none h-fit py-2 rounded-2xl cursor-pointer' onClick={handleLogin}>Log in</button> 

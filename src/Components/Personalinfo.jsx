@@ -47,9 +47,16 @@ const Personalinfo = ({handleClose}) => {
   }
   return (
     <div className='bg-transparent  w-fit p-10 border-5 justify-self-center text-black rounded-2xl mt-5 border-blue-900'>
-        <h1 className='font-bold text-[25px]'>Personal Information</h1>
-        <div className='flex gap-5'>
-             <div>
+       
+        <div className='flex justify-between'>
+            <h1 className='font-bold text-[25px] '>Personal Information</h1>
+           <h3  className='text-black font-bold text-2xl pt-1 cursor-pointer border-2 w-10 text-center' onClick={handleClose}><ion-icon name="close-outline"></ion-icon></h3>
+           </div>
+
+
+
+        <div className='flex flex-wrap gap-5 '>
+       <div>
           <h3 className='text-[20px] '> Full Name <span className='text-[red]'>*</span></h3>
        <input type="text" value={name}
           onChange={(e)=>{setName(e.target.value)}}
@@ -82,6 +89,15 @@ const Personalinfo = ({handleClose}) => {
    className='p-2 text-black border-2 w-[300px] rounded-2xl border-blue-900 my-2'></textarea>
         </div>
         </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
          <div className='justify-self-end'>
          <button className='p-2 w-[120px]  h-fit rounded-2xl bg-blue-900 text-white font-bold  ' onClick={handleSubmit} >Submit</button>
         </div>

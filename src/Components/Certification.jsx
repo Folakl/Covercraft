@@ -46,7 +46,10 @@ const {setFormData} = useContext(FormContext);
   }
   return (
    <div >
-           <h1 className='font-bold text-[25px] '>Certification/ Awards</h1>
+           <div className='flex justify-between'>
+            <h1 className='font-bold text-[25px] '>Certification/ Awards</h1>
+           <h3  className='text-black font-bold text-2xl pt-1 cursor-pointer border-2 w-10 text-center' onClick={handleClose}><ion-icon name="close-outline"></ion-icon></h3>
+           </div>
         <h3 className='text-[20px] '>Certification/Award Name <span className='text-[red]'>*</span></h3>
        <input type="text" 
        value={name} 

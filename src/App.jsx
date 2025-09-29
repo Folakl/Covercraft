@@ -32,11 +32,12 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Home />} />
         <Route path='/resetpassword' element={<Resetpassword/>}/>
+      
          
 
         {/* Protected routes wrapper */}
         <Route element={<ProtectedRoute />}>
-          <Route path="/resume" element={<Resume />} />
+          
           <Route path="/projects" element={<Projects />} />
           <Route path="/templates" element={<Templates />} />
           <Route path="/coverletter" element={<Coverletter />} />
@@ -48,6 +49,7 @@ function App() {
           <Route path="/profilepic" element={<Profilepic/>} />
           <Route path='/ai' element={<SummarizeAi/>}/>
           <Route path='/resumegen' element= {<ResumeGeneration/>}/>
+            <Route path="/resume" element={<Resume />} />
         
          
          

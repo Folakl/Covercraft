@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom'
 const Resume = () => {
   const navigate =useNavigate();
   const [showOverlay,setShowoverlay] = useState(false)
-  const [professionalshowOverlay,setProfessionalshowOverlay] = useState(false)
+ 
   const [workExperienceoverlay,setWorkExperienceoverlay] = useState(false)
   const [educationOverlay,setEducationOverlay] = useState(false)
   const [skillsOverlay,setSkillsOverlay] = useState(false)
@@ -23,7 +23,7 @@ const Resume = () => {
   const handleClose = () => {
     setShowoverlay(false)
     setCertificateoverlay(false)
-    setProfessionalshowOverlay(false)
+
     setEducationOverlay(false)
     setSkillsOverlay(false)
     setWorkExperienceoverlay(false)
@@ -114,7 +114,7 @@ const handleSubmitResume = async () => {
       </div>
 
       <div className='grid lg:flex md:flex lg:justify-between md:justify-between grid-cols-1 gap-2 lg:m-5 md:m-5 m-1 '>
-        <div className='lg:w-1/2 md:w-1/2 w-fi tmx-5   border-2 border-[navy] rounded-2xl p-5 '>
+        <div className='lg:w-1/2 md:w-1/2 w-fit h-fit  mx-5   border-2 border-[navy] rounded-2xl p-5 '>
           <div className='flex justify-between font-bold my-2'>
             <h3>Personal Information</h3>
             <button className="bg-[navy] text-white font-bold px-10 py-2 rounded-md cursor-pointer "
@@ -135,11 +135,7 @@ const handleSubmitResume = async () => {
             <button className="bg-[navy] text-white font-bold px-10 py-2 rounded-md cursor-pointer"
               onClick={() => setCertificateoverlay(true)}> Edit</button>
           </div>  
-          <div className='flex justify-between font-bold my-2'>
-            <h3>Professional Summary</h3>
-            <button className="bg-[navy] text-white font-bold px-10 py-2 rounded-md cursor-pointer"
-              onClick={() => setProfessionalshowOverlay(true)}> Edit</button>
-          </div>
+          
           <div className='flex justify-between font-bold my-2'>
             <h3>Work Experience</h3>
             <button className="bg-[navy] text-white font-bold px-10 py-2 rounded-md cursor-pointer"
@@ -153,7 +149,7 @@ const handleSubmitResume = async () => {
           <h3 className='text-center font-extrabold text-[25px] text-blue-950 mb-4'>Live Preview</h3>
           
            
-               <div className='grid-cols-2 w-fit grid gap-5'>
+               <div className='flex flex-wrap w-fit mx-5 gap-5'>
              <div>
             <h1 className='font-bold underline '>Personal Info</h1>
             <h3>Name: {formData.personal.name}</h3>
@@ -209,13 +205,6 @@ const handleSubmitResume = async () => {
         </div>
       )}
 
-      {professionalshowOverlay && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" onClick={handleClose}>
-          <div className="bg-white p-6 rounded-lg " onClick={handleInsideClick}>
-            <Professionalsummary handleClose={handleClose}  />
-          </div>
-        </div>
-      )}
 
       {workExperienceoverlay && (
         <div className="fixed inset-0 overflow-y-scroll  bg-black/50 flex items-center justify-center z-50" onClick={handleClose}>
@@ -252,13 +241,13 @@ const handleSubmitResume = async () => {
 
       <div className='flex justify-end'>
         {
-          loading? (<button className='cursor-pointer w-fit px-10 py-2 bg-blue-900 rounded-2xl text-white font-bold' onClick={handleSubmitResume}>Submiting to Ai</button>):
+          loading? (<button className='cursor-progress w-fit px-10 py-2 bg-blue-900 rounded-2xl text-white font-bold' onClick={handleSubmitResume}>Submiting to Ai</button>):
           <button className='cursor-pointer w-fit px-10 py-2 bg-blue-950 rounded-2xl text-white font-bold' onClick={handleSubmitResume}>Submit to Ai</button>
         }
 
       </div>
     </div>
-    )}
+     )} 
     </div>
   )
 }

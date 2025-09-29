@@ -34,15 +34,18 @@ const Skills = ({handleClose}) => {
   }
   return (
    <div className='bg-transparent w-fit p-5 border-5 justify-self-center rounded-2xl mt-5 border-blue-900'>
-           <h1 className='font-bold text-[25px] '>Skills</h1>
+           <div className='flex justify-between'>
+            <h1 className='font-bold text-[25px] '>Skills</h1>
+           <h3  className='text-black font-bold text-2xl pt-1 cursor-pointer border-2 w-10 text-center' onClick={handleClose}><ion-icon name="close-outline"></ion-icon></h3>
+           </div>
         <h3 className='text-[20px] '>Technical Skills <span className='text-[red]'>*</span></h3>
        <textarea name="" value={technicalSkill}
-         onChange={(e)=>{setTechnicalSkill(e.target.value)}} className='p-2 text-black border-2 w-[400px] rounded-2xl border-blue-900 my-2'  id="">React..</textarea>
+         onChange={(e)=>{setTechnicalSkill(e.target.value)}} className='p-2 text-black border-2 lg:w-[400px] md-w-[400px] w-[300px] rounded-2xl border-blue-900 my-2'  id="">React..</textarea>
 
         <h3 className='text-[20px] '>Soft Skills <span className='text-[red]'>*</span></h3>
        <textarea name="" value={softSkill}
            onChange={(e)=>{setSoftSkill(e.target.value)}}
-           className='p-2 text-black border-2 w-[400px] rounded-2xl border-blue-900 my-2'  id="">Communication..</textarea>
+           className='p-2 text-black border-2 lg:w-[400px] md-w-[400px] w-[300px]  rounded-2xl border-blue-900 my-2'  id="">Communication..</textarea>
 
         <h3 className='text-[20px] '> Skill Level <span className='text-[red]'>*</span></h3>
          <div className='flex gap-2'>
