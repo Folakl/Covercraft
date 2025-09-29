@@ -138,7 +138,7 @@ const submitSummary = async (resume, summaryText) => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="mt-10 text-center">
+      <div className="mt-[120px] text-center">
         <button
           className={` bg-blue-950 font-bold text-white rounded-2xl py-2 px-5 ${
             loading ? "cursor-progress" : "cursor-pointer"

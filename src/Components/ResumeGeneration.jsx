@@ -73,11 +73,12 @@ const ResumeGeneration = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="bg-blue-500 rounded-md font-bold w-fit px-10 py-5 h-fit mt-10 text-center">
+      <div className="bg-blue-500 rounded-md font-bold w-fit px-10 py-5 h-fit mt-[120px] text-center">
         <h3 className="my-4">Generate Resume</h3>
 
-        <button className="w-[120px] h-[30px] rounded-2xl bg-blue-950 text-white fornt-bold" onClick={FetchSummary}>fetch summary</button>
-
+      <div className="flex gap-5">
+          <button className="w-[180px] px-5 h-[42px] rounded-2xl bg-blue-950 text-white font-bold " onClick={FetchSummary}>Fetch summary</button>
+  
         {
           loading?
           (<button
@@ -95,6 +96,7 @@ const ResumeGeneration = () => {
         </button>
         )
         }
+      </div>
 
         {loading ? (
           <h3>Loading....</h3>

@@ -32,7 +32,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Home />} />
         <Route path='/resetpassword' element={<Resetpassword/>}/>
-        
+         
 
         {/* Protected routes wrapper */}
         <Route element={<ProtectedRoute />}>
@@ -48,6 +48,9 @@ function App() {
           <Route path="/profilepic" element={<Profilepic/>} />
           <Route path='/ai' element={<SummarizeAi/>}/>
           <Route path='/resumegen' element= {<ResumeGeneration/>}/>
+        
+         
+         
      
        
           
